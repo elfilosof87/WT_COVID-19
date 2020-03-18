@@ -26,8 +26,11 @@ body {
   left: 10px;
 }
 .active {
-  text-underline-position: below;
-  text-decoration: underline;
+  -moz-text-decoration-style: double;
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double;
+  -moz-text-decoration-line: underline overline;
+  text-decoration-line: underline overline;
 }
 
 .covid-nav {
