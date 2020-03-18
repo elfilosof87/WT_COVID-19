@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <button class="btn btn-primary my-3" id="get">GET</button>
+
+    <div id="res"></div>
+    <iframe
+      src="https://public.domo.com/cards/e3zxO"
+      width="600"
+      height="600"
+      marginheight="0"
+      marginwidth="0"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      width="768"
+      height="480"
+      src="https://www.youtube.com/embed/kVyrzn29QPk"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </body>
+
+  <script>
+    function getTodos() {
+      var c = 0;
+      var div = document.getElementById("res");
+
+      fetch("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats", {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
+          "x-rapidapi-key": "4aeb077cbdmsha9ab4b5a0b43a50p15db93jsn4c634706b9b2"
+        }
+      })
+        .then(res => res.json())
+        /*.then(res=> console.log(res.data.covid19Stats))*/
+        .then(post => {
+          for (let i = 0; i < 30; i++) {
+            div.innerHTML += `
+            
+            <h4>${c + 1}. Country: ${post.data.covid19Stats[c].country}</h4>
+            <p>Province: ${post.data.covid19Stats[c].province}</p>
+            <br>
+            `;
+            c++;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+
+    function showOutput(res) {
+      div.innerHTML = `
+  <div class="card card-body mb-4">
+    <h5>Status: ${res.data}</h5>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Headers
+    </div>
+    <div class="card-body">
+      <pre>${JSON.stringify(res.headers, null, 2)}</pre>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Data
+    </div>
+    <div class="card-body">
+      <pre>${JSON.stringify(res.data, null, 2)}</pre>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Config
+    </div>
+    <div class="card-body">
+      <pre>${JSON.stringify(res.config, null, 2)}</pre>
+    </div>
+  </div>
+`;
+    }
+
+    document.getElementById("get").addEventListener("click", getTodos);
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</html>
