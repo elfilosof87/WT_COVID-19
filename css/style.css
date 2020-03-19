@@ -27,7 +27,17 @@ body {
   left: 10px;
 }
 .active {
-  background: #a8d1ff;
+  text-decoration: underline overline;
+}
+
+#white {
+  background-color: white;
+}
+
+.vid-pad {
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .covid-nav {
@@ -275,13 +285,13 @@ li {
 .img-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 8px;
   padding: 10px;
   border-bottom: 1px solid #3e3e3e;
 }
 
 .img-grid > div {
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
   font-size: 20px;
 }

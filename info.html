@@ -25,7 +25,7 @@
                     alt="covidLogo" />
 
                 <ul class="covid-list">
-                    <li class="active"><a href="#">Link 1</a></li>
+                    <li><a href="#"><span class="active">Link 1</span></a></li>
                     <li><a href="#">Link 2</a></li>
                     <li><a href="#">Link 3</a></li>
                 </ul>
@@ -34,13 +34,6 @@
     </div>
 
     <div class="main">
-        <center>
-            <p class="covid-text">
-                Coronavirus
-            </p>
-
-
-        </center>
         <h1>Covid-19</h1>
         <p>Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome
             coronavirus 2 . The disease was first identified in 2019 in Wuhan, China, and has since
@@ -58,14 +51,14 @@
             average of five days. The standard method of diagnosis is by reverse transcription polymerase chain
             reaction (rRT-PCR) from a nasopharyngeal swab. The infection can also be diagnosed from a combination of
             symptoms, risk factors and a chest CT scan showing features of pneumonia.
-            <!--
+            <br>
             Recommended measures to prevent infection include frequent hand washing, maintaining distance from others,
             and
             not touching one's face.[23] The use of masks is recommended for those who suspect they have the virus and
             their
             caregivers, but not the general public.[24][25] There is no vaccine or specific antiviral treatment for
             COVID-19. Management involves treatment of symptoms, supportive care, isolation, and experimental
-            measures.[26] -->
+            measures.[26]
 
             The World Health Organization (WHO) declared the 2019–20 coronavirus outbreak a pandemic and a Public
             Health
@@ -81,11 +74,11 @@
             (COVID-19) cases.
 
             The following symptoms may appear 2-14 days after exposure.*</p>
-            <ul>
-                <li>Fever</li>
-                <li>Cough</li>
-                <li>Shortness of breath</li>
-            </ul>
+            <div class="img-grid" id="white">
+                <div><img src="images/sym1.jpg" class="img-fluid"><li>Fever</li></div>
+                <div><img src="images/sym2.jpg" class="img-fluid"><li>Cough</li></div>
+                <div><img src="images/sym3.jpg" class="img-fluid"><li>Shortness of breath</li></div>
+            </div>
             <p>Other symptoms can include:</p>
             <ul>
                 <li>Tiredness</li>
@@ -104,11 +97,7 @@
        
            
         
-        <div class="img-grid">
-        <div><img src="images/sym1.jpg" class="img-fluid"></div>
-        <div><img src="images/sym2.jpg" class="img-fluid"></div>
-        <div><img src="images/sym3.jpg" class="img-fluid"></div>
-        </div>
+        
 
         <h1>Causes</h1>
         <p>
@@ -128,8 +117,10 @@
             </ul>
         </p>
         <center>
-        <iframe width="853" height="480" src="https://www.youtube.com/embed/4OhvJ4wi034" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
+        <div class="vid-pad" id="white">
+        <center><iframe width="853" height="480" src="https://www.youtube.com/embed/4OhvJ4wi034" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        </div></center>
+        
     </div>
 </body>
 <script src="./js/main.js"></script>
