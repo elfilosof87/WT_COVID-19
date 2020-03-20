@@ -335,3 +335,16 @@ li {
   text-align: left;
   display: inline-block;
 }
+
+.tips-con {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.tips-con > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
