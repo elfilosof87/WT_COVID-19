@@ -15,7 +15,7 @@ body {
   text-transform: uppercase;
   padding-bottom: 20px;
   font-family: "Bebas Neue";
-  font-size: 44px;
+  font-size: 56px;
   letter-spacing: 2px;
 }
 
@@ -352,4 +352,8 @@ li {
 
 li {
   padding-bottom: 7px;
+}
+
+.question {
+  height: 180px;
 }
