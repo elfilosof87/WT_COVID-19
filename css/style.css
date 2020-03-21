@@ -40,7 +40,7 @@ body {
   left: 10px;
 }
 
-.active {
+.act {
   text-decoration: underline overline;
 }
 
@@ -271,10 +271,19 @@ body {
 @media screen and (max-width: 480px) {
   .social-panel-container.visible {
     transform: translateX(0px);
+    position: fixed;
+    top: 5px;
+    right: 5px;
   }
 
   .floating-btn {
     right: 10px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+  }
+  .covid-nav {
+    position: fixed;
   }
 }
 
@@ -366,4 +375,41 @@ li {
 
 .question {
   height: 180px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
 }
