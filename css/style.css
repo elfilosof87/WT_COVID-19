@@ -279,12 +279,9 @@ body {
 .img-fluid {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 350px;
-  height: 300px;
-  padding-left: 45px;
-  margin-left: 48px;
+  height: 250px;
+  align-content: center;
 }
-
 
 .main {
   margin-left: 10%;
@@ -308,7 +305,7 @@ p {
   border-bottom: 1px solid #3e3e3e;
 }
 
-.img-grid>div {
+.img-grid > div {
   text-align: center;
   padding: 15px 0;
   font-size: 20px;
@@ -350,10 +347,14 @@ p {
   padding: 10px 15px 10px 15px;
 }
 
-.tips-con>div {
+.tips-con > div {
   text-align: left;
   padding: 20px 0;
   font-size: 20px;
+}
+
+.tips-con > div > img {
+  margin-left: 11%;
 }
 
 li {
