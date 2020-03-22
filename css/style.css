@@ -341,6 +341,12 @@ p {
   transition: 0.3s;
 }
 
+.faq-cover {
+  padding: 20px 0px;
+  border-bottom: 1px solid #e3e3e3;
+  transition: 0.3s;
+}
+
 .prep-cover:hover {
   background-color: white;
   padding: 23px 0px;
