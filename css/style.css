@@ -318,3 +318,12 @@ li {
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
+
+#para {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#list {
+  text-align: left;
+}
